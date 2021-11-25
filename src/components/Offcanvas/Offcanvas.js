@@ -37,7 +37,7 @@ const SideNav = ({ name, ...props }) => {
                 </Nav.Link>
             </Container>
              <Nav.Link href='/signin' className='mt-4'>Sign in</Nav.Link>
-                 <Nav.Link href='/saved'>Saved items</Nav.Link>
+              <Nav.Link href='/saved'>Saved items</Nav.Link>
             </Nav>
             </Offstyle>
           </Container>
