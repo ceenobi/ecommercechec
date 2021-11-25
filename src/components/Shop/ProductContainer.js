@@ -23,7 +23,7 @@ export default function ProductContainer({ product }) {
             className='d-none d-lg-block mb-lg-5 mt-lg-2'
           />
           <p className=''>{product.name}</p>
-          <div className='mt-lg-5'>
+          <div className='mt-lg-4'>
             <p className='text-secondary mb-0'>
               {product.price.formatted_with_symbol}
             </p>
