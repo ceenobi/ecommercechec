@@ -1,0 +1,49 @@
+:root {
+  --mainBlue:#2a2a72;
+  --lightBlue:#009ffd;
+  --mainWhite:#f3f3f3;
+  --mainDark:#17191c;
+  --mainYellow:#ffa400;
+  --lightPurple:#4f4f69;
+   --lightRed:#9c2323;
+     --lightWhite: #f0eeee;
+       --lightNeon: #e2e2e2;
+         --mainOrange:#fd7e14;
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  list-style-type: none;
+  color: var(--mainWhite)!important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans', 'Roboto';  
+}
+
+p {
+font-family: 'Josefin Sans', 'Roboto'!important;
+}
+a , .bi-forward-fill {
+    color: var(--mainDark) !important;
+    text-decoration: none !important;
+  }
+  a p, .bi-chevron-compact-right {
+    color: var(--mainDark) !important;
+  }
+  a p:hover {
+    color: var(--lightRed) !important;
+  }
+
+  .detail {
+    background-color: var(--lightNeon);
+  }
+
