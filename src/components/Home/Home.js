@@ -12,15 +12,17 @@ const Home = () => {
   return (
     <>
       <CarouselView />
-      <HomeView>
-        <Container className='bg mt-5 py-5'>
-          <CarouselShop />
-          <Highlight />
-          <Watch />
-        </Container>
-        <Jumbotron />
-        <Trending />
-      </HomeView>
+      <Container fluid>
+        <HomeView>
+          <Container fluid className='bg mt-5 py-5'>
+            <CarouselShop />
+            <Highlight />
+            <Watch />
+          </Container>
+          <Jumbotron />
+          <Trending />
+        </HomeView>
+      </Container>
     </>
   )
 }

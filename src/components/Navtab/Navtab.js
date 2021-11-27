@@ -11,7 +11,7 @@ export default function Navtab() {
    return (
      <Container className='d-none d-lg-block my-3'>
        <NavbarStyle>
-         <Nav className='justify-content-center'>
+         <Nav className='justify-content-center fw-bold'>
            <Nav.Item className='mx-3'>
              <Link to='/apple' activeClassName="active">APPLE</Link>
            </Nav.Item>

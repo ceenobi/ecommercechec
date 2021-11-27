@@ -67,15 +67,17 @@ export default function ProductDetail({ onAddToBag, isLoading}) {
         <Container className='py-5'>
           <Row>
             <Col lg={4} md={6}>
-             {isLoading && <Spinner />}
+              {isLoading && <Spinner />}
               <Slide left>
-             <Image fluid src={product.src} alt={product.name} />
-             </Slide>
+                <Image fluid src={product.src} alt={product.name} />
+              </Slide>
             </Col>
-            
+
             <Col lg={4} md={6} className='align-self-center'>
               <div className='text-center px-4'>
-                <h4 className='border-bottom border-secondary text-secondary p-2'>{product.name}</h4>
+                <h4 className='border-bottom border-secondary text-secondary p-2'>
+                  {product.name}
+                </h4>
                 <p className='mb-0'>{product.price}</p>
                 {product.inventory > 0 ? (
                   <div className='d-grid gap-2'>
@@ -85,59 +87,84 @@ export default function ProductDetail({ onAddToBag, isLoading}) {
                         This product is available for immediate purchase.
                       </small>
                     </p>
-                    <Button variant='dark'className='mt-3 mb-4'
-                    onClick={() => {onAddToBag(product.id,1,product.option)}}>
-                       ADD TO SHOPPING BAG
-                      </Button>
-                  </div> 
+                    <Button
+                      variant='dark'
+                      className='mt-3 mb-4'
+                      onClick={() => {
+                        onAddToBag(product.id, 1, product.option)
+                      }}
+                    >
+                      ADD TO SHOPPING BAG
+                    </Button>
+                  </div>
                 ) : (
                   <Alert variant='dark'>out of stock</Alert>
-                )}  
+                )}
               </div>
             </Col>
-             <Col lg={4} md={6} className='d-lg-block d-none'>
+            <Col lg={4} md={6} className='d-lg-block d-none'>
               {isLoading && <Spinner />}
               <Slide right>
-              <Image fluid src={product.src} alt={product.name} />
+                <Image fluid src={product.src} alt={product.name} />
               </Slide>
             </Col>
           </Row>
         </Container>
       </ProductWrapper>
-      
+
       <div className='mt py-5 px-3 bg-white'>
         <Container>
-        <Row>
-          <Col lg={8} className='mb-4'>
-            {product.variant_groups?.length ? (<h6>VARIATIONS</h6>) : null}
-             <div className='d-flex justify-content-start mb-4'>
-              {product.variant_groups?.length ? product.variant_groups[0].options?.map((option) => (
-              <div>
-                <Image className='px-4' fluid src={getImageUrl(option.assets[0])} alt={option.name}
-                onClick={() => updateProduct(option.price.raw, getImageUrl(option.assets[0]), option.name, {
-                  id: option.id, variantId: product.variant_groups[0].id,})}
-                  style={{ width: '10rem', height: '10rem' }}/>
-                   </div>
-                  ))
-                : null}
-            </div>
-            <AccordionView />
-          </Col>
-          <Col lg={4}>
-            <div className='bg-white border-white shadow p-3'>
-              <Image className='d-block mx-auto' src={product.src} alt={product.name}
-                style={{ width: '10rem', height: '10rem' }}/>
-              <p className='mt-5'>
-                <small>PRODUCT DETAILS</small>
-              </p>
-              <p dangerouslySetInnerHTML={{ __html: product.description }}></p>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={3}>
-          </Col>
-        </Row>
+          <Row>
+            <Col lg={8} className='mb-4'>
+              {product.variant_groups?.length ? <h6>VARIATIONS</h6> : null}
+              <div className='d-flex justify-content-start mb-4'>
+                {product.variant_groups?.length
+                  ? product.variant_groups[0].options?.map((option) => (
+                      <div>
+                        <Image
+                          className='px-4'
+                          fluid
+                          src={getImageUrl(option.assets[0])}
+                          alt={option.name}
+                          onClick={() =>
+                            updateProduct(
+                              option.price.raw,
+                              getImageUrl(option.assets[0]),
+                              option.name,
+                              {
+                                id: option.id,
+                                variantId: product.variant_groups[0].id,
+                              }
+                            )
+                          }
+                          style={{ width: '10rem', height: '10rem' }}
+                        />
+                      </div>
+                    ))
+                  : null}
+              </div>
+              <AccordionView />
+            </Col>
+            <Col lg={4}>
+              <div className='bg-white border-white shadow p-3'>
+                <Image
+                  className='d-block mx-auto'
+                  src={product.src}
+                  alt={product.name}
+                  style={{ width: '10rem', height: '10rem' }}
+                />
+                <p className='mt-5'>
+                  <small>PRODUCT DETAILS</small>
+                </p>
+                <p
+                  dangerouslySetInnerHTML={{ __html: product.description }}
+                ></p>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={3}></Col>
+          </Row>
         </Container>
       </div>
     </div>

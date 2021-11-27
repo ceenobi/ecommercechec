@@ -50,9 +50,9 @@ const Navroute = ({navBackground, BagItems, totalCost}) => {
             <Navbar.Collapse id='responsive-navbar-nav' className='d-none d-lg-block'>
               <Nav className='me-auto'>
               {merchant.map((shop) => (
-               <div>
-                <Link to='/' className='mx-3' activeClassName="active" end>{shop.country}</Link>
-                <Link to='/' className='mx-3' activeClassName="active">{shop.status}</Link> 
+               <div className='d-flex' key={shop.id}>
+                <h6 className='mx-3' activeClassName="active" end>{shop.country}</h6>
+                <h6 className='mx-3' activeClassName="active">{shop.status}</h6> 
                 </div>
                  ))}
               </Nav>

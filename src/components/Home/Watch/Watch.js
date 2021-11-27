@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Row, Col, Image} from 'react-bootstrap'
+import { Row, Col, Image, Button} from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import { commerce } from '../../../lib/Commerce'
 import Spinner from '../../others/Spinner'
@@ -47,9 +47,8 @@ const Watch = () => {
               <p className='text-uppercase mt-3'>More than just a time piece</p>
               <h2>Apple Watch Series 7</h2>
               <Link
-                to={`/details/${product.id}`}
-                className='btn btn-dark hover-shadow'>
-                SHOP NOW
+                to={`/details/${product.id}`}>
+                <Button variant='dark' size='lg'>SHOP NOW</Button>
               </Link>
               </Slide>
             </div>   
@@ -66,7 +65,7 @@ const Watch = () => {
                   fluid
                 />
                 <div className='p-3 text-center'>
-                  <p className='fw-bold'>Smartwatch</p>
+                  <p className='fw-bold'>Galaxt Watch 4 Classic</p>
                   <p>
                     <em>Do more than just tell time.</em>
                   </p>
@@ -88,14 +87,14 @@ const Watch = () => {
         <div className='d-none d-lg-block image2'>
           {samwatch.map((product) => (
               <Slide right>
-            <div key={product.id} className='paint'>
+            <div key={product.id} className='paint py-3'>
               <Image
                 src={product.image.url}
                 alt='smartwatch'
                 className='img-fluid'
               />
-              <div className='p-3 text-center'>
-                <p className='fw-bold'>Smartwatch</p>
+              <div className='text-center'>
+                <p className='fw-bold'>Galaxy Watch 4 Classic</p>
                 <p>
                   <em>Do more than just tell time.</em>
                 </p>

@@ -3,9 +3,11 @@ import { Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import AccordionBag from './Accordion'
+import NewsLink from './NewsLink'
 
 export default function NoBag() {
   return (
+    <>
     <NoBagWrap>
       <Row className='px-4 justify-content-center mt-4'>
         <Col lg={7} md={7}>
@@ -21,7 +23,7 @@ export default function NoBag() {
           </div>
         </Col>
         <Col lg={4} md={5}>
-        <div className='backdrop py-4 px-3 mt-lg-5'>
+        <div className='backdrop py-4 px-3 mt-5'>
          <h6 className='mt-4 border-bottom pb-4'>
           <i className='bi bi-truck mx-2'></i>SHIPPING DETAILS
           </h6>
@@ -30,6 +32,8 @@ export default function NoBag() {
         </Col>
       </Row>
     </NoBagWrap>
+      <NewsLink/>
+    </>
   )
 }
 export const NoBagWrap = styled.div`
@@ -48,7 +52,7 @@ export const NoBagWrap = styled.div`
   }
   background: url('https://res.cloudinary.com/ceenobi/image/upload/v1636538781/Gadgets/brando-makes-branding-smTDI-z1rlY-unsplash_ypg2gp.jpg');
   background-size: cover;
-  height: 700px;
+  height: 800px;
   @media (min-width: 992px) {
     .bi-bag-fill {
       font-size: 15rem !important;

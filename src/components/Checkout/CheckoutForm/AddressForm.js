@@ -52,7 +52,7 @@ export default function AddressForm({ checkoutToken, next }) {
 
   return (
     <FSize>
-        <Container className='size py-5 px- mt-lg-5'>
+        <Container className='size py-5 px-4 mt-lg-5'>
         <Form onSubmit={handleSubmit((data) =>next({...data,shippingCountry,shippingSubdivision,shippingOption}))}>
           <Row>
             <Col xs={12} lg={6} className='mx-auto mb-2'>

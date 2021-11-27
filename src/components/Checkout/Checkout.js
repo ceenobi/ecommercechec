@@ -106,17 +106,19 @@ export default function Checkout({ bag, order, error, onCaptureCheckout}) {
       <div className='backdrop'>
          <div className='jumbotron jumbotron-fluid py-5'>
            <div className='d-flex justify-content-center text-center align-items-center'>
-             <div className='overlay'>
+             <div className='overlay mt-lg-5'>
                <div className='py-5 text-center'>
-                 <h1 className='mt-lg-5 py-5'>ORDER FUFILLMENT</h1>
+                 <h1 className='mt-lg-5 py-lg-5'>ORDER FUFILLMENT</h1>
                </div>
              </div>
            </div>
          </div>
        </div>
-      <Container className='push-up'>
-        <Row className='py-5 mt-3'>
-          <Col lg={6} md={6} className='border-end border-secondary'>
+      
+      <Container fluid >
+        <div className='push-up py-5 mt-5'>
+        <Row className='mt-5 px-2 px-lg-4'>
+          <Col lg={6} md={6} className='border-lg-end border-secondary'>
             <h4 className='text-center fw-bold'>Checkout</h4>
             <Stepper
               activeStep={activeStep}
@@ -136,8 +138,10 @@ export default function Checkout({ bag, order, error, onCaptureCheckout}) {
             <h>Do visit our accessories page and get the best skin covering for your mobile device.</h>
           </div>
           </Col>
-        </Row>   
+        </Row> 
+         </div>  
       </Container>
+     
     </CheckoutWrapper>
   )
 }
@@ -159,7 +163,7 @@ const CheckoutWrapper = styled.div`
     .backdrop {
       height: 500px;
     }
-    .push-up {
+    .push-u {
       transform: translateY(-20%);
     }
   }

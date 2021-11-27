@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 export default function Trending() {
   return (
     <TrendWrap>
-      <Container className='bg'>
+      <Container fluid className='bg'>
         <h3 className='text-center px-4 borderBottom'>DISCOVER WHAT'S NEW</h3>
         <Row className='py-5 px-4'>
-          <Col lg={4} className='mx-auto'>
+          <Col lg={4} md={4}className='mx-auto'>
             <div>
               <div className='text-center mt-5'>
                 <Image
@@ -43,7 +43,7 @@ export default function Trending() {
               </div>
             </div>
           </Col>
-          <Col lg={4} className='mx-auto'>
+          <Col lg={4} md={4}className='mx-auto'>
             <div className='text-center mt-5 hover-zoom'>
               <Image
                 fluid
@@ -59,7 +59,7 @@ export default function Trending() {
               </Link>
             </div>
           </Col>
-          <Col lg={4} className='mx-auto'>
+          <Col lg={4} md={4}className='mx-auto'>
             <div>
               <div className='text-center mt-5'>
                 <Image

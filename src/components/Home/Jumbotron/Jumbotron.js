@@ -6,11 +6,11 @@ import { Container } from 'react-bootstrap/'
 const Jumbotron = () => {
   return (
     <JumboWrapper>
-      <Container className='jumbotron jumbotron-fluid p-5 border-top'>
+      <Container fluid className='jumbotron jumbotron-fluid p-5 border-top'>
         <div className='d-flex justify-content-center text-center align-items-center'>
           <div className='overlay'>
             <div className='image paint p-3 text-center'>
-              <p className='fw-bold'>To our customers</p>
+              <h6 className='fw-bold'>To our customers</h6>
               <p>
                 <em>
                   Check out our blog for updates on how to enhance your smart

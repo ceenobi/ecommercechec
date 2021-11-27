@@ -42,7 +42,7 @@ const CarouselShop = () => {
             <div  key={product.id}>
             <Image className='d-block w-100' src={product.image.url}alt='First slide'/>
             <Carousel.Caption>
-              <h1 className=''>Beats Studio Buds</h1>
+              <h1>Beats Studio Buds</h1>
               <Link to={`/details/${product.id}`}>
                 <Button variant='dark' size='lg' className='mt-3 hover-shadow'>
                   SHOP NOW

@@ -18,7 +18,7 @@ export const JumboWrapper = styled.div`
   .image {
     width: 10rem;
   }
-  p 
+  h6,p
   {
     color: var(--mainDark);
   }
