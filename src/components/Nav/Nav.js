@@ -9,7 +9,7 @@ import { commerce } from '../../lib/Commerce'
 
 const Navroute = ({navBackground, BagItems, totalCost}) => {
   const [merchant, setMerchant] = useState([])
-
+ 
   const fetchMerchant = async () => {
     const {data} = await commerce.merchants.about()
     setMerchant(data)
@@ -18,12 +18,13 @@ const Navroute = ({navBackground, BagItems, totalCost}) => {
    fetchMerchant()
   }, [])
   console.log(merchant)
+
    
   const location = useLocation()
     
     return (
       <NavWrapper>
-        <Navbar expand='lg' variant='light'fixed='top' className='flex-column'
+        <Navbar expand='lg' variant='light'fixed='top'
         style={{ transition: '1s ease', backgroundColor: navBackground ? 'white' : 'transparent'}}>
           <Container fluid> 
            {['top'].map((placement, idx) => (

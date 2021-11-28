@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { useState, useEffect, useRef, Suspense, lazy } from 'react'
-import { Apple, Footer, ProductDetail, Bag, Checkout, Error, Samsung, Nav, Smartphones, Scrollbutton} from './components/index'
+import { Apple, Footer, ProductDetail, Bag, Checkout, Error, Samsung, Nav, Smartphones, Scrollbutton,} from './components/index'
 import {commerce} from './lib/Commerce'
 import Spinner from './components/others/Spinner'
 
