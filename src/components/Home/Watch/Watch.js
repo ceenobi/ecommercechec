@@ -65,7 +65,7 @@ const Watch = () => {
                   fluid
                 />
                 <div className='p-3 text-center'>
-                  <p className='fw-bold'>Galaxt Watch 4 Classic</p>
+                  <p className='fw-bold'>Galaxy Watch 4 Classic</p>
                   <p>
                     <em>Do more than just tell time.</em>
                   </p>

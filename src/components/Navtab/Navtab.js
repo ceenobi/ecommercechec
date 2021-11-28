@@ -14,7 +14,7 @@ export default function Navtab() {
 
    setVisible(
      (prevScrollPos > currentScrollPos &&
-       prevScrollPos - currentScrollPos > 70) ||
+       prevScrollPos - currentScrollPos > 200) ||
        currentScrollPos < 10
    )
 
