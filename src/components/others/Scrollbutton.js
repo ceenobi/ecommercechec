@@ -1,4 +1,3 @@
-import React from 'react'
 import {useState} from 'react'
 import styled from 'styled-components'
 
@@ -23,12 +22,18 @@ export default function Scrollbutton() {
     window.addEventListener('scroll', toggleVisible)
     
     return (
+      <>
       <Scroll>
-       <div>
+       <div className='d-none d-md-block d-lg-block'>
          <i className='bi bi-arrow-up-square-fill' onClick={scrollToTop}
          style={{display: visible ? 'inline' : 'none'}} ></i>
-        </div>
+        </div>   
       </Scroll>
+       <div className="d-md-none d-lg-none mt-5 mb- text-center">
+        <p className="bg-dark text-white mt- mb-0 p-2" size="sm" onClick={scrollToTop}>
+          <i className="bi bi-arrow-up"></i>Back to top</p>
+         </div>
+      </>
     )
 }
 const Scroll = styled.div`

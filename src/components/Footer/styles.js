@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FooterWrapper = styled.footer`
    {
-    margin-top: 6rem;
+    margin-top: rem;
     background: var(--mainDark);
     padding-top: 2rem;
   }

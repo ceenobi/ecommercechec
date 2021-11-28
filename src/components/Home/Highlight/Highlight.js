@@ -71,7 +71,6 @@ const Highlight = () => {
         </Col>
         <Col md={6} xs={10} lg={6} className='mb-4 mx-auto hover-zoom py-5'>
           {iphone.map((product) => (
-            <Slide top>
               <div key={product.id}>
                 <img
                   src='https://res.cloudinary.com/ceenobi/image/upload/v1635439806/Gadgets/Apple_iPhone-13-Pro_iPhone-13-Pro-Max_09142021_rmb4w8.jpg'
@@ -86,7 +85,6 @@ const Highlight = () => {
                   </Link>
                 </div>
               </div>
-            </Slide>
           ))}
         </Col>
         <Col md={3} xs={10} lg={2} className='mb-4 mx-auto push-down'>

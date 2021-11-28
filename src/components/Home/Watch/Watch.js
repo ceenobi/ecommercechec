@@ -36,8 +36,7 @@ const Watch = () => {
         {isLoading && <Spinner />}
         <Col md={8} xs={10} lg={12} className='mb-4 mx-auto push'>
           {products.map((product) => (
-            <div className='text-center mt-3' key={product.id}>
-               <Slide top>
+            <div className='text-center mt-3' key={product.id}> 
               <Image
                 src={product.image.url}
                 alt='applewatchs7'
@@ -50,7 +49,6 @@ const Watch = () => {
                 to={`/details/${product.id}`}>
                 <Button variant='dark' size='lg'>SHOP NOW</Button>
               </Link>
-              </Slide>
             </div>   
           ))}
         </Col>
@@ -100,7 +98,7 @@ const Watch = () => {
                 </p>
                 <Link to={`/details/${product.id}`}>
                   <p>
-                    SHOP SMARTWATCH
+                    <small>SHOP SMARTWATCH</small>
                     <i className='bi bi-chevron-compact-right'></i>
                   </p>
                 </Link>

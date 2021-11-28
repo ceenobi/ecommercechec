@@ -12,7 +12,8 @@ const SideNav = ({ name, ...props }) => {
 
   return (
     <>
-      <i className='bi bi-list text-dark d-lg-none' onClick={handleShow} />
+     <Offstyle>
+      <i className='bi bi-list text-dark d-lg-none' onClick={handleShow}><span className='menu mx-1'>MENU</span></i>
       <Offcanvas show={show} onHide={handleClose} {...props} className='h-100'>
         <Fade top>
         <Offcanvas.Header closeButton>
@@ -22,7 +23,7 @@ const SideNav = ({ name, ...props }) => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Container fluid>
-            <Offstyle>
+           
             <Nav className='text-center'>
               <Nav.Link href='/apple'>Apple</Nav.Link>
               <Nav.Link href='/samsung'>Samsung</Nav.Link>
@@ -39,11 +40,12 @@ const SideNav = ({ name, ...props }) => {
              <Nav.Link href='/signin' className='mt-4'>Sign in</Nav.Link>
               <Nav.Link href='/saved'>Saved items</Nav.Link>
             </Nav>
-            </Offstyle>
+           
           </Container>
         </Offcanvas.Body>
           </Fade>
       </Offcanvas>
+       </Offstyle>
       </>
     
   )
@@ -58,4 +60,8 @@ const Offstyle = styled.nav`
   .offcanvas-title h5{
     font-family: 'Noto Sans'!important;
   }
+  .menu {
+    font-size: 14px!important;
+  }
+
 `

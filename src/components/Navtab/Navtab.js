@@ -14,7 +14,7 @@ export default function Navtab() {
 
    setVisible(
      (prevScrollPos > currentScrollPos &&
-       prevScrollPos - currentScrollPos > 200) ||
+       prevScrollPos - currentScrollPos > 400) ||
        currentScrollPos < 10
    )
 
@@ -33,7 +33,7 @@ export default function Navtab() {
    width: '100%',
    backgroundColor: 'none',
    textAlign: 'center',
-   transition: 'top 0.5s',
+   transition: 'top 0.5s ease',
    marginTop: '20rem',
  }
 
