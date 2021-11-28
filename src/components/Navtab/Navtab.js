@@ -3,7 +3,6 @@ import {Nav, Container} from 'react-bootstrap'
 import { NavLink as Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {useState, useEffect} from 'react'
-// import {commerce} from '../../lib/Commerce'
 import debounce from '../others/debounce'
 
 export default function Navtab() {
@@ -30,12 +29,12 @@ export default function Navtab() {
 
  const navbarStyles = {
    position: 'fixed',
-   height: '60px',
+   height: '20px',
    width: '100%',
    backgroundColor: 'none',
    textAlign: 'center',
    transition: 'top 0.5s',
-   paddingTop: '4rem',
+   marginTop: '20rem',
  }
 
 
@@ -44,16 +43,16 @@ export default function Navtab() {
    return (
      
      <Container fluid className='d-none d-lg-block my-3' 
-     style={{ ...navbarStyles, top: visible ? '0' : '-100px' }}>
+     style={{ ...navbarStyles, top: visible ? '50px' : '-100px' }}>
        <NavbarStyle>
          <Nav className='justify-content-center fw-bold'>
            <Nav.Item className='mx-3'>
-             <Link to='/apple' activeClassName='active'>
+             <Link to='/apple' activeclassname='active'>
                APPLE
              </Link>
            </Nav.Item>
            <Nav.Item className='mx-3'>
-             <Link to='/samsung' activeClassName='active'>
+             <Link to='/samsung' activeclassname='active'>
                SAMSUNG
              </Link>
            </Nav.Item>
