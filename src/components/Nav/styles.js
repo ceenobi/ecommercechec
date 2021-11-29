@@ -16,18 +16,23 @@ export const NavWrapper = styled.nav`
     border-top: 2px solid var(--mainWhite);
   }
   .nav a.active {
-    color: var(--lightRed)!important;
+    color: var(--lightRed) !important;
   }
-  
- .nav.navbar a:hover {
-   background-color: var(--mainYellow)!important;
- }
+
+  .nav.navbar a:hover {
+    background-color: var(--mainYellow) !important;
+  }
   @media all and (min-width: 992px) {
     .navbar-brand {
       font-size: 2rem;
     }
     a {
       font-size: 0.9rem;
+    }
+  }
+  @media all and (max-width: 300px){
+    .g-fold {
+      display: none !important;
     }
   }
 `

@@ -24,30 +24,31 @@ const Navroute = ({navBackground, BagItems, totalCost}) => {
     
     return (
       <NavWrapper>
-        <Navbar expand='lg' variant='light'fixed='top'
+        <Navbar expand='lg' fixed='top'
         style={{ transition: '1s ease', backgroundColor: navBackground ? 'white' : 'transparent'}}>
-          <Container fluid> 
-           {['top'].map((placement, idx) => (
-           <SideNav key={idx} placement={placement} name={placement} />
+         <Container fluid> 
+         {['top'].map((placement, idx) => (
+            <SideNav key={idx} placement={placement} name={placement} />
              ))} 
-            <Navbar className='d-lg-none'>  
-             <Link to='/'>
+              <Link to='/'>
               {merchant.map((shop) => (
               <Navbar.Brand className='fw-bold d-lg-none'>{shop.name}</Navbar.Brand>
               ))}
               </Link>
-               </Navbar>  
-               <Navbar className='d-lg-none'>  
-               {location.pathname === '/bag'? (
-              <h6 className='align-self-center'>Bag:<small className='fw-bold mx-1'>{totalCost}</small></h6>
+             <Navbar className='d-lg-none'> 
+              <Nav>
+              {location.pathname === '/bag'? (
+              <h6 className='align-self-center g-fold'>Bag:<small className='fw-bold'>{totalCost}</small></h6>
                ) : (
-              <Link to='/bag' className='align-self-center px-3'>         
+              <Link to='/bag' className='align-self-center'>         
                <span><i className='bi bi-bag'></i>Bag</span>
                {BagItems > 0 ? <Badge pill bg='warning'>{BagItems}</Badge> : <Badge pill bg='warning'></Badge> }
               </Link>
-              )}            
-              <Search />
-             </Navbar>  
+              )} 
+              </Nav>  
+               <Search />     
+              </Navbar>  
+                       
             <Navbar.Collapse id='responsive-navbar-nav' className='d-none d-lg-block'>
               <Nav className='me-auto'>
               {merchant.map((shop) => (

@@ -47,3 +47,8 @@ a , .bi-forward-fill {
     background-color: var(--lightNeon);
   }
 
+ @media all and (max-width: 300px) {
+   p {
+     font-size: 14px;
+   }
+ }

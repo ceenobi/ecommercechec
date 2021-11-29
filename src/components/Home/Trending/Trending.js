@@ -26,7 +26,7 @@ export default function Trending() {
                   </p>
                 </Link>
               </div>
-              <div className='text-center mt-5'>
+              <div className='text-center mt-5 mt-md-3 mt-lg-5'>
                 <Image
                   fluid
                   src='https://res.cloudinary.com/ceenobi/image/upload/v1635541888/Gadgets/lucrezia-carnelos-wQ9VuP_Njr4-unsplash_u72pgk.jpg'
@@ -61,7 +61,7 @@ export default function Trending() {
           </Col>
           <Col lg={4} md={4} className='mx-auto'>
             <div className='d-flex d-md-grid d-lg-grid gap-2 top'>
-              <div className='text-center mt-5 round'>
+              <div className='text-center mt-2 mt-md-5 round'>
                 <Image
                   fluid
                   src='https://res.cloudinary.com/ceenobi/image/upload/v1635547950/Gadgets/mael-balland-wcBFtctph_M-unsplash_nxl7jo.jpg'
@@ -100,12 +100,11 @@ export default function Trending() {
 }
 
 const TrendWrap = styled.div`
+  background-color: var(--lightWhite);
   .image {
     width: 20rem;
   }
   .bg {
-    background-color: var(--lightWhite);
-   
   }
   p {
     font-size: 12px;
